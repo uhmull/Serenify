@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenify - Breathing Bubble</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        header {
+            background-color: #ff91b9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #ffadcb;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ffc8dd;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .bubble-container {
+            margin-top: 50px;
+        }
+        .bubble {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #ff91b9;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: breathing 8s infinite;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        .bubble-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        @keyframes breathing {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Serenify!!</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="resources.html">Resources</a>
+        <a href="breathingbubble.html">Breathing Bubble</a>
+    </nav>
+
+    
+    <main>
+        <!-- Breathing Bubble Overview -->
+        <section style="text-align: left;">
+            <h2>Information</h2>
+            <strong>What is a Breathing Bubble?</strong>
+            <p>
+                A breathing bubble is a calming breathing technique. It focuses on the slow, deliberate as if blowing bubbles. It is often used with children.
+            </p>
+          
+            <strong>Why Use a Breathing Bubble?</strong>
+            <p>
+                A breathing bubble can help both children and adults calm down and practice mindful breathing. It reduces stress and anxiety by focusing on a slow exhale.
+            </p>
+          
+            <strong>Long-Term Benefits</strong>
+            <p>
+                Using a breathing bubble regularly can help manage anxiety. It is a way to calm down and lengthen the outbreath, helping regulate the nervous system and relieving stress and tension.
+            </p>
+          
+            <h2>Different Breathing Techniques</h2>
+            
+            <strong>Diaphragmatic Breathing</strong>
+            <p>
+                Diaphragmatic Breathing uses the diaphragm muscle to take slow, deep breaths. You can practice it by: finding a comfortable position to sit or lie down (with back support), placing one hand on your chest and the other on the abdomen, inhaling slowly through the nose (holding breath for a few seconds if necessary), and exhaling through the mouth.  
+            </p>
+
+            <strong>4-7-8 Breathing</strong>
+            <p>
+                The 4-7-8 breathing technique involves a specific pattern of inhaling, holding, and exhaling. In order to perform this: sit or lie in a comfortable position, inhale slowly through the nose for 4 counts, holding breath for 7 counts, exhaling for 8 counts. 
+            </p>
+           
+            <strong>Box Breathing</strong>
+            <p>
+                Box breathing is a simple relaxation technique, also known as square breathing or 4-4-4 breathing. To do this: find a comfortable seated or lying position, close your eyes if necessary, inhale slowly through your nose for 4 counts, hold your breath for 4 counts, exhale slowly for 4 counts, and hold your breath again for 4 counts.
+            </p>
+
+            <strong>Alternate Nostril Breathing</strong>
+            <p>
+                Alternate nostril breathing involves alternately inhaling and exhaling through each nostril. It promotes relaxation and balances the nervous system. To do this: sit in an upright position, place the tips of right index and middle fingers between eyebrows, close right nostril, inhale through the left nostril, close the left nostril, exhale through the right nostril, and repeat.
+            </p>
+          
+            <strong>Resonance Breathing</strong>
+            <p>
+                Resonance breathing is breathing at a rate of 5-7 breaths per minute, each inhale and exhale lasting about 5-6 seconds. It improves mental clarity and focus. 
+            </p>
+          </section>
+          <br></br>
+          <h1>Breathing Bubble</h1>
+          <br></br>
+
+        <!-- Breathing Bubble -->
+        <div class="bubble-container">
+            <div class="bubble">
+                <div class="bubble-text">Breathe In</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const bubbleText = document.querySelector('.bubble-text');
+        let isBreathingIn = true;
+
+        setInterval(() => {
+            bubbleText.textContent = isBreathingIn ? "Breathe Out" : "Breathe In";
+            isBreathingIn = !isBreathingIn;
+        }, 4000); 
+    </script>
+    <br></br>
+    <br></br>
+</body>
+</html>
